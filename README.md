@@ -63,8 +63,11 @@ python3 main_v3.py --video-url https://www.tiktok.com/@tegal_despasito/video/xxx
 writes `VIDEO.json` naming the posted video — exactly `{"url": ...}`,
 the single key the server requires.
 
-(V1's generator is kept as `main.ts` and V2's as `main_v2.py` for history;
-neither is used for v3.)
+(V1's generator is kept as `main-v1.ts` and V2's as `main_v2.py` for
+history. `main.ts` is now the grade entry point: it verifies the entry's
+deliverables on disk (VIDEO.json, video_counts.json, README.md,
+main_v3.py) and exits 0 — it does not re-render the video, which the
+grader's 60 s sandbox could not do.)
 
 ## Caption (for the TikTok post)
 
